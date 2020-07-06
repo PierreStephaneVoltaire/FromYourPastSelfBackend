@@ -23,7 +23,7 @@ namespace infrastructure
         {
             return BackgroundJob.Schedule(
                 () => sendEmail(messageFromPastSelf),
-                TimeSpan.FromSeconds(messageFromPastSelf.when));
+                TimeSpan.FromDays(messageFromPastSelf.when));
         }
         public string updateEmail(MessageFromPastSelf messageFromPastSelf)
         {
